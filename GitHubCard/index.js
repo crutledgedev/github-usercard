@@ -1,7 +1,12 @@
 /* Step 1: using axios, send a GET request to the following URL 
-           (replacing the palceholder with your Github name):
-           https://api.github.com/users/<your name>
-*/
+//            (replacing the palceholder with your Github name):
+//            https://api.github.com/users/<your name>
+// // // */
+
+// axios.get("https://api.github.com/users/crutledgedev")
+// .then(response => {
+// console.log(response);
+// });
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -24,7 +29,7 @@
           user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+// const followersArray = [];
 
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
@@ -45,6 +50,39 @@ const followersArray = [];
 </div>
 
 */
+
+//create elements
+const card = document.createElement('div');//has class - parent
+const img = document.createElement('img'); //parent first child
+const cardInfo = document.createElement('card-info');//has class -card content container
+const name = document.createElement('h3');//has class appends card info
+const username = document.createElement('p'); //has class appends card info
+const Location = document.createElement('p');//appends card ino
+const profile = document.createElement('p'); //appends card info
+const gitAddress= document.createElement('a');//appends profile
+const followers = document.createElement('p'); //appends card info
+const following = document.createElement('p'); //appends card info
+const bio = document.createElement('p'); //appends card info
+
+// structure
+card.appendChild(img);
+card.appendChild(cardInfo);
+cardInfo.appendChild(name);
+cardInfo.appendChild(username);
+cardInfo.appendChild(Location);
+cardInfo.appendChild(profile);
+profile.appendChild(gitAddress);
+cardInfo.appendChild(followers);
+cardInfo.appendChild(following);
+cardInfo.appendChild(bio);
+//classes
+card.classList.add('parent');
+cardInfo.classList.add('card-info');
+name.classList.add('name');
+username.classList.add('username');
+
+console.log(card);
+
 
 /* List of LS Instructors Github username's: 
   tetondan
